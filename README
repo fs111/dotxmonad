@@ -1,0 +1,9 @@
+This is my current X setup consiting of xmonad [0], xmobar [1] and trayer [2]
+losely modeled after the howto in the haskell wiki [3]. 
+
+
+[0] http://xmonad.org/
+[1] http://projects.haskell.org/xmobar/
+[2] https://github.com/sargon/trayer-srg
+[3] http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration
+
