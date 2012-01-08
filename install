@@ -1,3 +1,4 @@
 #!/bin/bash
 
 ln -s -f xsession ~/.xsession
+ln -s -f Xresources ~/.Xresources

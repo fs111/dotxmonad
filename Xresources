@@ -1,0 +1,11 @@
+!!!
+!!! XTerm
+!!!
+XTerm*background:     black
+XTerm*foreground:     white
+XTerm*cursorColor:    white
+XTerm*font:           fixed
+XTerm*saveLines:      2048
+XTerm*scrollBar:      false
+XTerm*faceName: DejaVu Sans Mono:style=Bold
+XTerm*faceSize: 12
