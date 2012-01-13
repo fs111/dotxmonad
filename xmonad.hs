@@ -7,6 +7,15 @@ import System.IO
 import System.Environment(getEnv)
 
 
+
+myManageHook = composeAll
+    [ className =? "Gimp" --> doFloat
+    , className =? "MPlayer" --> doFloat
+    , resource =? "skype" --> doFloat
+    , resource =? "pidgin" --> doFloat
+    , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
+
+
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobarrc"
     xmonad $ defaultConfig
@@ -22,3 +31,5 @@ main = do
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "scrot")
         ]
+
+
