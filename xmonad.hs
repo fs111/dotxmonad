@@ -13,7 +13,7 @@ myManageHook = composeAll
     , className =? "MPlayer" --> doFloat
     , resource =? "skype" --> doFloat
     , resource =? "pidgin" --> doFloat
-    , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
+    ]
 
 
 main = do
