@@ -9,3 +9,12 @@ XTerm*saveLines:      2048
 XTerm*scrollBar:      false
 XTerm*faceName: DejaVu Sans Mono:style=Bold
 XTerm*faceSize: 11
+!!!
+!!! urxvt
+!!!
+URxvt*background:     black
+URxvt*foreground:     white
+URxvt*cursorColor:    white
+URxvt*font:           xft:DejaVu Sans Mono:bold:size=11
+URxvt*saveLines:      2048
+URxvt*scrollBar:      false
