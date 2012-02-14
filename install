@@ -2,3 +2,4 @@
 
 ln -s -f $PWD/xsession ~/.xsession
 ln -s -f $PWD/Xresources ~/.Xresources
+ln -s -f $PWD/Xmodmap ~/.Xmodmap
