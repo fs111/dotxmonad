@@ -5,8 +5,7 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 import System.Environment(getEnv)
-
-
+import qualified XMonad.Actions.CycleWS as CWS
 
 myManageHook = composeAll
     [ className =? "Gimp" --> doFloat
@@ -30,6 +29,15 @@ main = do
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "scrot")
+
+         -- cycling workspaces
+        , ((mod4Mask,               xK_Right),  CWS.nextWS)
+        , ((mod4Mask,               xK_Left ),  CWS.prevWS)
+        , ((mod4Mask .|. shiftMask, xK_Right),  CWS.shiftToNext >>
+           CWS.nextWS)
+        , ((mod4Mask .|. shiftMask, xK_Left),   CWS.shiftToPrev >>
+           CWS.prevWS)
+        , ((mod4Mask,               xK_z),      CWS.toggleWS)
         ]
 
 
