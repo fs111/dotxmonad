@@ -15,7 +15,7 @@ $HOME/opt/trayer/bin/trayer --edge top --align right --SetDockType true --SetPar
  
 # Set the background image
  
-feh --bg-fill $HOME/Bilder/2012/*So*/*602*
+feh --bg-fill $HOME/.xmonad/bg.jpg
  
 # Fire up apps
  
