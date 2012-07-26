@@ -10,7 +10,7 @@ xmodmap .Xmodmap
 
 # Set up an icon tray
  
-$HOME/opt/trayer/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --expand true --width 10 --transparent true --tint black --height 18 &
  
 # Set the background image
@@ -29,9 +29,8 @@ if [ -x /usr/bin/gnome-sound-applet ] ; then
    gnome-sound-applet &
 fi
  
-if [ -x /usr/bin/gnome-power-manager ] ; then
-   sleep 3
-   gnome-power-manager &
+if [ -x /usr/bin/xfce-power-manager ] ; then
+   xfce-power-manager &
 fi
  
 exec xmonad
