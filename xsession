@@ -29,8 +29,8 @@ if [ -x /usr/bin/gnome-sound-applet ] ; then
    gnome-sound-applet &
 fi
  
-if [ -x /usr/bin/xfce-power-manager ] ; then
-   xfce-power-manager &
+if [ -x /usr/bin/xfce4-power-manager ] ; then
+   xfce4-power-manager &
 fi
  
 exec xmonad
