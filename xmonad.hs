@@ -6,6 +6,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 import System.Environment(getEnv)
 import qualified XMonad.Actions.CycleWS as CWS
+import XMonad.Hooks.SetWMName
 
 myManageHook = composeAll
     [ className =? "Gimp" --> doFloat
@@ -16,7 +17,7 @@ myManageHook = composeAll
 
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobarrc"
+    xmproc <- spawnPipe "/home/kelpe/.cabal/bin/xmobar ~/.xmonad/xmobarrc"
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
@@ -25,6 +26,7 @@ main = do
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
+        , startupHook = setWMName "LG3D"
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")

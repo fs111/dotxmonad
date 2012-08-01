@@ -10,12 +10,12 @@ xmodmap .Xmodmap
 
 # Set up an icon tray
  
-$HOME/opt/trayer/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --expand true --width 10 --transparent true --tint black --height 18 &
  
 # Set the background image
  
-feh --bg-fill $HOME/.xmonad/bg.jpg
+feh --bg-scale Pictures/wallpapers/1270852589251.jpg
  
 # Fire up apps
  
