@@ -10,7 +10,7 @@ xmodmap .Xmodmap
 
 # Set up an icon tray
  
-$HOME/opt/trayer/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --expand true --width 10 --transparent true --tint black --height 18 &
  
 # Set the background image
