@@ -25,6 +25,13 @@ if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
 
+if [ -x /usr/bin/gnome-settings-daemon ] ; then
+   gnome-settings-daemon &
+fi
+
+
+
+
 if [ -x /usr/bin/gnome-sound-applet ] ; then
    gnome-sound-applet &
 fi
