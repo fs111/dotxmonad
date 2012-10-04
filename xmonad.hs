@@ -4,6 +4,7 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Actions.WindowBringer
 import System.IO
 import System.Environment(getEnv)
 import qualified XMonad.Actions.CycleWS as CWS
@@ -40,6 +41,9 @@ main = do
         , ((mod4Mask .|. shiftMask, xK_Left),   CWS.shiftToPrev >>
            CWS.prevWS)
         , ((mod4Mask,               xK_z),      CWS.toggleWS)
+        -- window bringer extension
+         , ((mod4Mask .|. shiftMask, xK_g     ), gotoMenu)
+         , ((mod4Mask .|. shiftMask, xK_b     ), bringMenu)
         ]
 
 
