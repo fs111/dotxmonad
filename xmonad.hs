@@ -10,8 +10,7 @@ import System.Environment(getEnv)
 import qualified XMonad.Actions.CycleWS as CWS
 
 myManageHook = composeAll
-    [ className =? "Gimp" --> doFloat
-    , className =? "MPlayer" --> doFloat
+    [ className =? "MPlayer" --> doFloat
     , resource =? "skype" --> doFloat
     , resource =? "pidgin" --> doFloat
     ]
