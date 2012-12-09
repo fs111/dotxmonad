@@ -9,13 +9,6 @@ import System.IO
 import System.Environment(getEnv)
 import qualified XMonad.Actions.CycleWS as CWS
 
-myManageHook = composeAll
-    [ className =? "MPlayer" --> doFloat
-    , resource =? "skype" --> doFloat
-    , resource =? "pidgin" --> doFloat
-    ]
-
-
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobarrc"
     xmonad $ defaultConfig
@@ -44,5 +37,4 @@ main = do
          , ((mod4Mask .|. shiftMask, xK_g     ), gotoMenu)
          , ((mod4Mask .|. shiftMask, xK_b     ), bringMenu)
         ]
-
 
