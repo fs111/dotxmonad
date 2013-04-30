@@ -15,6 +15,7 @@ main = do
         { manageHook = manageDocks <+> manageHook defaultConfig
         , startupHook = setWMName "LG3D"
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
+        , focusedBorderColor = myFocusedBorderColor
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
@@ -38,3 +39,5 @@ main = do
          , ((mod4Mask .|. shiftMask, xK_b     ), bringMenu)
         ]
 
+
+myFocusedBorderColor = "#0000C0"
