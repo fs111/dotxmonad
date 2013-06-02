@@ -12,5 +12,5 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %wlan0% * %eth0% <fc=#ee9a00>%date%</fc> | %EBBR%"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %wlan0% * %eth0% <fc=#0000c0>%date%</fc> | %EBBR%"
        }

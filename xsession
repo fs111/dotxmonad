@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# make sure dmenu knows about all our PATH trickery
+. $HOME/.bashrc
  
 # Load resources
  
