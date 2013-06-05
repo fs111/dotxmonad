@@ -43,4 +43,7 @@ fi
 
 $HOME/code/resizR/src/resizR
 
+$HOME/.dropbox-dist/dropboxd &
+disown
+
 exec xmonad
