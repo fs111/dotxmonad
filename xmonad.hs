@@ -14,6 +14,7 @@ main = do
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
         , startupHook = setWMName "LG3D"
+        , terminal = "xterm"
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , focusedBorderColor = myFocusedBorderColor
         , logHook = dynamicLogWithPP xmobarPP
