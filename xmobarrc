@@ -2,7 +2,7 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12"
        , bgColor = "black"
        , fgColor = "grey"
        , position = TopW L 90
-       , commands = [ Run Weather "EBBR" ["-t"," <tempC>C","-L","-5","-H","30","--normal","green","--high","red","--low","lightblue"] 36000
+       , commands = [ Run Weather "EDDT" ["-t"," <tempC>C","-L","-5","-H","30","--normal","green","--high","red","--low","lightblue"] 36000
                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 52
                     , Run Network "wlan0" ["-L","0","-H","11500","--normal","green","--high","red"] 10
                     , Run Network "eth0" ["-L","0","-H","11500","--normal","green","--high","red"] 10
@@ -12,5 +12,5 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %wlan0% * %eth0% <fc=#0000c0>%date%</fc> | %EBBR%"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %wlan0% * %eth0% <fc=#0000c0>%date%</fc> | %EDDT%"
        }
