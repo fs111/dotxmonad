@@ -15,7 +15,10 @@ xmodmap .Xmodmap
  
 trayer --edge top --align right --SetDockType true --SetPartialStrut false \
  --expand true --width 10 --transparent true --tint black --height 18 &
- 
+
+# Start clipboard manager
+parcellite &
+
 # Set the background image
  
 feh --bg-fill $HOME/.xmonad/bg.jpg
