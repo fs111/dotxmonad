@@ -5,12 +5,12 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12"
        , commands = [ Run Weather "EDDT" ["-t"," <tempC>C","-L","-5","-H","30","--normal","green","--high","red","--low","lightblue"] 36000
                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 52
                     , Run Network "wlan0" ["-L","0","-H","11500","--normal","green","--high","red"] 10
-                    , Run Network "eth0" ["-L","0","-H","11500","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Date "%a %b %_d %H:%M" "date" 10
+                    , Run Battery ["Bat0"] 180
+                    , Run Date "<fc=#ee9a00>%b %_d %y %H:%M</fc>" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %wlan0% * %eth0% <fc=#0000c0>%date%</fc> | %EDDT%"
+       , template = "%StdinReader% }{ %cpu%| %battery% | %memory% * %wlan0% * <fc=#0000c0>%date%</fc> | %EDDT%"
        }
